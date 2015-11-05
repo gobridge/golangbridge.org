@@ -1,0 +1,82 @@
+<!-- Footer -->
+<!--<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center">
+        <ul class="list-inline">
+            <li><a href="http://twitter.com/spf13" class="icon-twitter icon-2x"></a></li>
+            <li><a href="http://github.com/spf13/hugo" class="icon-octocat icon-2x"></a></li>
+        </ul>
+        <hr>
+        <p>Copyright &copy; Steve Francia 2013&ndash;2014</p>
+      </div>
+    </div>
+  </div>
+</footer>-->
+<!--###############-- Footer START --###############-->
+    <footer>
+        <div class="container">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Organize</a></li>
+                <li><a href="#">Sponsor</a></li>
+                <li><a href="#">Events</a></li>
+		<li><a href="#">FAQ</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Github</a></li>
+            </ul>
+            <a class="text-link" href="mailto:support@golangbridge.com">support@golangbridge.com</a>
+        </div><!-- container -->
+        <section>
+            <p>© Go Bridge 2015. All rights reserved </p>
+        </section>
+    </footer>
+    <!--###############-- Footer END --###############-->
+    
+<!-- /Footer -->
+
+<!-- Bootstrap core JavaScript -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/js/jquery-2.1.1.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<!--<script src="/js/bootstrap.min.js"></script>-->
+<script>
+$(function() {
+$('a[href*=#]:not([href=#])').click(function() {
+  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+      || location.hostname == this.hostname) {
+
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+      $('html,body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+      return false;
+    }
+  }
+});
+});
+$('.owl-carousel').owlCarousel({
+loop:true,
+margin:10,
+nav:true,
+autoplay:true,
+autoplayHoverPause:true,
+autoplayTimeout:3000,
+responsive:{
+    0:{
+        items:1
+    },
+    1000:{
+        items:3
+    },
+}
+})
+</script>
+
+{{ partial "analytics.html" . }}
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+{{ partial "header.html" . }}
+{{ partial "top-block.html" . }}
+  {{ range $index, $element :=  .Data.Pages.ByWeight }}{{ if eq .Section "post" }}
+
+    <div id="main">
+        <!-- Intro -->
+        {{ if modBool $index 2 }}<div id="intro" class="counterpoint">{{ else }}<div id="intro" class="point">{{ end}}
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3 text-center">
+                {{ if (isset .Params "icon") }}
+                    <i class="lead-icon icon-{{ .Params.icon }}"></i>
+                {{ end }}
+                <h2>{{ .Title }}</h2>
+                <p class="lead">
+                    {{ .Content }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Intro -->
+      {{ end }}
+      {{ if eq .Section "carousel" }}
+      <!-- /Point -->
+
+
+      <div class="callout">
+        <div class="container">
+          <!--<div class="row">
+            <div class="col-md-12 text-center">
+                {{ if (isset .Params "icon") }}
+                    <i class="callout-icon icon-{{ .Params.icon }}"></i>
+                {{ end }}
+                <p>{{ .Content }}</p>
+            </div>
+          </div>-->
+          <div class="row">
+            <div class="col-md-12 text-center">-->
+                <!-- Wrapper for slides -->
+                <!--<div class="carousel-inner owl-carousel">
+                    {{ range .Params.carousel }}
+                      <div class="item"> <blockquote><p>{{ .quote }}</p>&mdash; {{ .author }} <a href="{{ .url }}">{{ .quote_date }}</a></blockquote> </div>
+                    {{ end }}
+                </div>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Point -->
+      {{ end }}
+    {{ end }}
+
+    </div>
+     
+<main>
+	<section class="aboutus">
+        <div id="abo" class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h2>About Us</h2>
+					<p>GoBridge is the newest member of the <a class="btn btn-blue" href="http://bridgefoundry.org" target="_blank"> BridgeFoundry</a> umbrella organization. 
+						We build bridges to educate underrepresented communities to teach technical skills and to foster diversity in Go.</p>
+				</div><!-- col-md-6 -->
+				<div class="col-md-6">
+					<h2>Core mission</h2>
+					<p>Our core mission is to enable minorities in tech to use Go as a tool to learn and teach programming and, ultimately, to empower 
+						underrepresented groups in tech to help increase diversity in the Go community.</p>
+				</div><!-- col-md-6 -->
+				
+				<div class="col-md-12">
+					<hr />
+					<h2>Core vision</h2>
+					<p>We believe education is most effective when it is tailored to and provided by local communities. We are dedicated to growing 
+						and supporting local teams of individuals and companies who will have ownership in the work they do. We are also dedicated 
+						to developing in-depth and idiomatic training materials. Our workshops are targeted at smaller, local Go communities, and 
+						not necessarily directly at the global Go community. But we believe that, as each individual the Go community strengthens, 
+						the collective Go community will, in turn, strengthen as well.</p>
+				</div><!-- col-md-6 -->
+			</div><!-- row -->
+        </div><!-- container -->
+    </section><!-- aboutus -->
+	
+	<section class="online">
+        <div id="onl" class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Online Communities</h2>
+					<p>GoBridge has the responsibility of being the steward for several online Go sites. We work with an incredible team of administrators
+						to make sure these sites are inclusive to the largest number of communities and viewpoints, with the most varied and diverse 
+						backgrounds possible.</p>
+					<p>Gophers <a href="http://bit.ly/go-slack-signup" target="_blank">Slack</a> is a thriving, real-time messaging community. If you 
+						are looking to get immediate answers to questions or join in conversation about Go with other Gophers, this is the place to be.</p>
+					<p>Go <a href="https://forum.golangbridge.org" target="_blank">Forum</a> is a new site where ideas, views, questions and answers can be 
+						exchanged and discussed. It also allows for all the content that is discussed to be indexed and searchable from the Web. If you are 
+						looking for historical answers to your questions, this is the place to search.</p>
+				</div><!-- col-md-12 -->
+			</div><!-- row -->
+        </div><!-- container -->
+    </section><!-- online -->
+
+    <section class="workshops">
+        <div id="org" class="container">
+            <h2>Organize a Workshop</h2>
+            <p>Want to get involved? Organize a workshop in your area! We are here to help you every step of the way.</p>
+			
+				<ul>
+                    <li>
+                        <span class="badge">1</span>
+                        <p>Start by creating an <a href="https://github.com/gobridge/organizing/issues" target="_blank">issue</a> 
+				in the organizing repo (issues represent upcoming and potential events, and hold to-do lists for each). </p>
+                    </li>
+                    <li>
+                        <span class="badge">2</span>
+                        <p>Create one issue for each workshop you are planning. Please include a possible date and location. You 
+				can always edit the issue when you know more.</p>
+                    </li>
+                </ul>
+			<p> The GoBridge team of community managers will be with you 
+				every step of the way to help you put on a successful event. So, join us!</p>
+        </div>
+    </section>
+
+    <section class="sponsor">
+        <div id="spn"class="container">
+			<section>
+                    <h1>Become a sponsor</h1>
+                </section>
+            <p>Most GoBridge workshops need some level of support. This can range from offering a space, paying for food or even travel expenses for trainers.</p>
+        
+			<div class="aler alert-info">
+                    <i class="glyphicon glyphicon-info-sign"></i> 
+					If you or your company is interested in helping, please reach out to 
+				<a class="btn btn-blue" href="mailto:support@golangbridge.org">support@golangbridge.org</a>
+                </div>
+			
+		</div>
+    </section>
+
+    <section class="events">
+        <div id="evn" class="container">
+			<div class="well">
+				<h2>Upcoming Events</h2>
+				<hr />
+				<ul>
+					<li>
+						<p>SF Docker Event : <a href="http://www.meetup.com/gobridge/events/225853880/" target="_blank">http://www.meetup.com/gobridge/events/225853880/</a></p>
+					</li>
+				</ul>
+            	
+			</div><!-- well -->
+            
+        </div>
+    </section>
+
+    <section class="coreteam">
+        <div id="cor" class="container">
+            <h2 class="pull-left">Core Team</h2>
+			<p class="pull-right">GoBridge : <a class="btn btn-default" href="mailto:support@golangbridge.org">support@golangbridge.org</a><br /></p>
+            <div class="clearfix"></div>
+			<hr />
+				<ul>
+					<li>Sarah Adams : <a class="btn btn-default" href="mailto:sarah@golangbridge.org">sarah@golangbridge.org</a></li>
+					<li>Carlisia Campos : <a class="btn btn-default" href="mailto:carlisia@golangbridge.org">carlisia@golangbridge.org</a></li>
+					<li>Luna Duclos : <a class="btn btn-default" href="mailto:luna@golangbridge.org">luna@golangbridge.org</a></li>
+					<li>William Kennedy : <a class="btn btn-default" href="mailto:bill@golangbridge.org">bill@golangbridge.org</a></li>
+					<li>Bryan Liles : <a class="btn btn-default" href="mailto:bryan@golangbridge.org">bryan@golangbridge.org</a></li>
+					<li>Jérôme Petazzoni : <a class="btn btn-default" href="mailto:jerome@golangbridge.org">jerome@golangbridge.org</a></li>
+				</ul>
+        </div>
+    </section><!-- intro -->
+        <!-- Call to Action -->
+        <!--<div id="action" class="call-to-action">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1 text-center">
+                <h1 style="padding-bottom:.5em;">Getting Started</h1>
+                <a href="https://github.com/spf13/hugo/releases" class="btn btn-lg btn-primary">Download <i class="icon-arrow-down"></i></a>
+                <a href="/overview/quickstart" style="color:white;font-weight:300;">Quickstart Guide</a>
+                <p>&nbsp;</p>
+                <h4>Using Homebrew?</h4>
+                <pre><code>brew install hugo</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>-->
+        <!-- /Call to Action -->
+	
+	</main>
+
+{{ partial "footer.html" . }}

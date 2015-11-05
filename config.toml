@@ -1,4 +1,5 @@
-baseurl = "http://replace-this-with-your-hugo-site.com/"
+baseurl = "http://golangbridge.org"
 languageCode = "en-us"
-title = "Verolop"
-theme = "hugo-base"
+title = "GoBridge"
+copyright = "Copyright (c) 2015, GoBridge; some rights reserved."
+MetaDataFormat = "yaml"

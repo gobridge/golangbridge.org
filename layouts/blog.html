@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8">
+
+
+    <base href="{{ .Site.BaseUrl }}">
+    <title>{{ .Site.Title }}</title>
+
+</head>
+<body lang="en">
+
+<section id="main">
+  <div>
+RATITA
+      <h1 id="title">{{.Site.Title}}</h1>
+    {{ range first 10 .Data.Pages }}
+        {{ .Render "summary"}}
+    {{ end }}
+  </div>
+</section>
+
+{{ partial "footer.html" . }}
