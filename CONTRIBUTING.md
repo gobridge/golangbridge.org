@@ -1,9 +1,9 @@
 # How to contribute
 
-Note: Maintainers of this repository have [additional instructions](#maintainers) for how to deploy the generated files to github pages.
+Note: Maintainers of this repository have [additional instructions for maintainers](#maintainers) on how to deploy the generated files to github pages.
 
 ----------
-The GoBridge website contains information for people interested in learning about what we do and who we are, and how to contact us.
+The GoBridge website contains information for people interested in learning about what we do and who we are, our scheduled events, how to contact us, etc.
 
 As with all of our resources, this is a community driven work by volunteers and for volunteers who benefit from GoBridge. This means YOU! If you are interested in improving the UX and/or design of the website, we encourage you to do so and hope to make your process of contributing as easy as possible with the detailed step-by-step instructions below.
 
@@ -56,11 +56,11 @@ Hugo will output a url that you can paste on your browser to see the live websit
 
 ## <a name="maintainers"></a> For Maintainers
 
-#### After fetching a pull request, start at the instructions above to [run Hugo](#runhugo) and generate the static files into the subtree public folder.
+### After fetching a pull request, start at the instructions above to [run Hugo](#runhugo) and generate the static files into the subtree public folder.
 
-#### Push to source
+#### Update the source content
 * ```git push origin source```
 
-#### Push the public subtree to the master branch
+#### Update the static files by pushing the public subtree to the master branch
 
 * ```git subtree push --prefix=public git@github.com:gobridge/gobridge.github.io.git master```
