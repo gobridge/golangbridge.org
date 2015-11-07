@@ -15,9 +15,9 @@ As with all of our resources, this is a community driven work by volunteers and 
 
 ### Making changes
 
-#### Refresh your local repo (not necessary if you just cloned it):
+#### Refresh your local repo's source branch (not necessary if you just cloned it):
 
-* ```git pull```
+* ```git pull origin source```
 
 #### Create a topic branch from the [source](https://github.com/gobridge/gobridge.github.io/tree/source) branch:
 
