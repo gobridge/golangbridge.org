@@ -59,14 +59,25 @@ Hugo will output a url that you can paste on your browser to see the live websit
 ### After fetching a pull request, start at the instructions above to [run Hugo](#runhugo) and generate the static files into the subtree public folder.
 
 #### Pull down new files from the `master branch` into the `public`subtree folder (just in case they have diverged -- if they have, a merge will be needed). This will help avoid merge conflicts:
-* ```git subtree pull --prefix=public git@github.com:gobridge/gobridge.github.io.git master```
+```git subtree pull --prefix=public git@github.com:gobridge/gobridge.github.io.git master```
 
 #### Update the source content
-* ```git push origin source```
+```git push origin source```
 
 #### Update the static files by pushing the public subtree to the master branch
 
-* ```git subtree push --prefix=public git@github.com:gobridge/gobridge.github.io.git master```
+```
+- Change default branch to `placeholder` branch (on github settings)
+
+- Run:
+git push origin `git subtree split --prefix public git@github.com:gobridge/gobridge.github.io.git`:master --force
+
+- Run:
+git subtree push --prefix=public git@github.com:gobridge/gobridge.github.io.git master
+
+- Change default branch to `master` branch (on github settings)
+
+```
 
 #### Some GH Pages trickery
 
