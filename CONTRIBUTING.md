@@ -69,8 +69,7 @@ Hugo will output a url that you can paste on your browser to see the live websit
 ```
 - Change default branch to `placeholder` branch (on github settings)
 
-- Run:
-git push origin `git subtree split --prefix public git@github.com:gobridge/gobridge.github.io.git`:master --force
+- Delete the `master` branch
 
 - Run:
 git subtree push --prefix=public git@github.com:gobridge/gobridge.github.io.git master
