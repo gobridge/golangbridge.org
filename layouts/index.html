@@ -138,21 +138,21 @@
 		</div>
     </section>
 
-    <section class="events">
-        <div id="evn" class="container">
-			<div class="well">
-				<h2>Upcoming Events</h2>
-				<hr />
-				<ul>
-					<li>
-						<p>Fresno, CA: September 10th &amp; 11th: <a href="https://www.bridgetroll.org/events/255" target="_blank">Learn How To Code Google's Go (golang) Programming Language</a></p>
-					</li>
-				</ul>
-
-			</div><!-- well -->
-
-        </div>
-    </section>
+		<section class="events">
+			<div id="evn" class="container">
+				<div class="well">
+					<h2>Upcoming Events</h2>
+					<hr />
+					{{ range $.Site.Data.events }}
+					<ul>
+						<li>
+							<p>{{ .where }}: {{ .when }}: <a href="{{ .link }}" target="_blank">{{ .title }}</a></p>
+						</li>
+					</ul>
+					{{ end }}
+				</div>
+			</div>
+		</section>
 
     <section class="coreteam">
         <div id="cor" class="container">
