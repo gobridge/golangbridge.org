@@ -155,23 +155,17 @@
 		</section>
 
     <section class="coreteam">
-        <div id="cor" class="container">
-            <h2 class="pull-left">Core Team</h2>
-			<p class="pull-right">GoBridge: <a class="btn btn-default" href="mailto:support@golangbridge.org">support@golangbridge.org</a><br /></p>
-            <div class="clearfix"></div>
-			<hr />
-				<ul>
-					<li>Bryan Liles: <a class="btn btn-default" href="mailto:bryan@golangbridge.org">bryan@golangbridge.org</a></li>
-					<li>Carlisia Campos: <a class="btn btn-default" href="mailto:carlisia@golangbridge.org">carlisia@golangbridge.org</a></li>
-					<li>Cassandra Gil: <a class="btn btn-default" href="mailto:cassandra@golangbridge.org">cassandra@golangbridge.org</a></li>
-					<li>Edward Muller: <a class="btn btn-default" href="mailto:ed@golangbridge.org">ed@golangbridge.org</a></li>
-					<li>Gunjan Patel: <a class="btn btn-default" href="mailto:gunjan@golangbridge.org">gunjan@golangbridge.org</a></li>
-					<li>Jérôme Petazzoni: <a class="btn btn-default" href="mailto:jerome@golangbridge.org">jerome@golangbridge.org</a></li>
-					<li>Johnny Boursiquot: <a class="btn btn-default" href="mailto:johnny@golangbridge.org">johnny@golangbridge.org</a></li>
-					<li>Luna Duclos: <a class="btn btn-default" href="mailto:luna@golangbridge.org">luna@golangbridge.org</a></li>
-					<li>William Kennedy: <a class="btn btn-default" href="mailto:bill@golangbridge.org">bill@golangbridge.org</a></li>
+			<div id="cor" class="container">
+				<h2 class="pull-left">Core Team</h2>
+				<p class="pull-right">GoBridge: <a class="btn btn-default" href="mailto:support@golangbridge.org">support@golangbridge.org</a><br /></p>
+        <div class="clearfix"></div>
+			  <hr />
+			  <ul>
+			  {{ range $.Site.Data.core.members }}
+				  <li>{{ .name }}: <a class="btn btn-default" href="mailto:{{ .email }}">{{ .email }}</a></li>
+				{{ end }}
 				</ul>
-        </div>
+			</div>
     </section><!-- intro -->
         <!-- Call to Action -->
         <!--<div id="action" class="call-to-action">
