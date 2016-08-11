@@ -54,44 +54,12 @@ Hugo will output a url that you can paste on your browser to see the live websit
 
 ---
 
-## <a name="maintainers"></a> For Maintainers
+# Maintainers
 
-### After fetching a pull request, start at the instructions above to [run Hugo](#runhugo) and generate the static files into the subtree public folder.
+The website is hosted on [Netlify](https://app.netlify.com/sites/gobridge-dot-org) (despite the name of the repository).
 
-#### Pull down new files from the `master branch` into the `public`subtree folder (just in case they have diverged -- if they have, a merge will be needed). This will help avoid merge conflicts:
-```git subtree pull --prefix=public git@github.com:gobridge/gobridge.github.io.git master```
+Merges into the `source` branch are automatically rendered and deployed to golangbridge.org by Netlify.
 
-#### Update the source content
-```git push origin source```
+If you wish to preview the rendered version of a PR, fetch the PR and follow the instructions above to [run Hugo](#runhugo).
 
-#### Update the static files by pushing the public subtree to the master branch
-
-```
-- Change default branch to `placeholder` branch (on github settings)
-
-- Delete the `master` branch
-
-- Run:
-git subtree push --prefix=public git@github.com:gobridge/gobridge.github.io.git master
-
-- Change default branch to `master` branch (on github settings)
-
-```
-
-#### Some GH Pages trickery
-
-If after you push you see the updated files on the repo but the website hasn't refreshed, it is some GH Pages trickery that will require you to edit the index.html file (just add or remove an empty line, and it probably can be any of the files in the recent commit) and commit it.
-
-This will totally mess up the tracking for the public subtree, so bee a good citizen and do the following steps to fix it so the next person to make changes isn't lost wondering what is happening.
-
-```git checkout master```
-
-```git pull origin master```
-
-```git log``` <- look up the SHA for the original commit (not the very last one you added just to tweak things)
-
-```git reset --hard [insert SHA here]```
-
-```git push origin master -f```
-
-That's it. Good as new.
+The `public/` folder is ignored by git. There is no need to check it in as Netlify will generate it automatically.
