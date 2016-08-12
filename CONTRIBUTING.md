@@ -1,6 +1,6 @@
 # How to contribute
 
-Note: Maintainers of this repository have [additional instructions for maintainers](#maintainers) on how to deploy the generated files to github pages.
+Note: Maintainers of this repository have [additional instructions for maintainers](#maintainers) on how to deploy the website.
 
 ----------
 The GoBridge website contains information for people interested in learning about what we do and who we are, our scheduled events, how to contact us, etc.
@@ -15,13 +15,12 @@ As with all of our resources, this is a community driven work by volunteers and 
 
 ### Making changes
 
-#### Refresh your local repo's source branch (not necessary if you just cloned it):
+#### Refresh your local repo's master branch (not necessary if you just cloned it):
 
-* ```git pull origin source```
+* ```git pull origin master```
 
-#### Create a topic branch from the [source](https://github.com/gobridge/gobridge.github.io/tree/source) branch:
+#### Create a topic branch:
 
-* ```git checkout source```(if you are not already in the source branch)
 * ```git checkout -b 12-add-events-page``` (this example contains a hypothetical issue number and a short title)
 
 #### Make your changes :boom:
@@ -31,7 +30,7 @@ This website is generated using Hugo. They have [excellent documentation](https:
 ####  <a name="runhugo"></a> Run Hugo and generate new static files that will reflect your changes:
 * ```hugo ```
 
-The generated content will be placed in the subtree public directory. Note that at this point, if you check the branch for differences, there should be none.
+The generated content will be placed in the `public/` directory. Note that at this point, if you check the branch for differences, there should be none.
 
 #### Visualize your changes on your local computer:
 * ```hugo server```
@@ -54,12 +53,16 @@ Hugo will output a url that you can paste on your browser to see the live websit
 
 ---
 
-# Maintainers
+# Maintainerss
 
 The website is hosted on [Netlify](https://app.netlify.com/sites/gobridge-dot-org) (despite the name of the repository).
 
-Merges into the `source` branch are automatically rendered and deployed to golangbridge.org by Netlify.
+Merges into the `master` branch are automatically rendered and deployed to golangbridge.org by Netlify.
 
 If you wish to preview the rendered version of a PR, fetch the PR and follow the instructions above to [run Hugo](#runhugo).
 
-The `public/` folder is ignored by git. There is no need to check it in as Netlify will generate it automatically.
+The `public/` directory is ignored by git. There is no need to check it in as Netlify will generate it automatically.
+
+PR's are automatically rendered by Netlify and are available publicly via the following URL pattern: `http://deploy-preview-<PR#>.gobridge-dot-org.netlify.com/` (eg. For PR#3, the url would be `http://deploy-preview-3.gobridge-dot-org.netlify.com/`).
+
+Notifications are pushed to #gobridge-ops on Slack and include preview links.
