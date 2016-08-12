@@ -53,7 +53,7 @@ Hugo will output a url that you can paste on your browser to see the live websit
 
 ---
 
-# Maintainerss
+# Maintainers
 
 The website is hosted on [Netlify](https://app.netlify.com/sites/gobridge-dot-org) (despite the name of the repository).
 
