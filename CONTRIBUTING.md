@@ -55,7 +55,7 @@ Hugo will output a url that you can paste on your browser to see the live websit
 
 # Maintainers
 
-The website is hosted on [Netlify](https://app.netlify.com/sites/gobridge-dot-org) (despite the name of the repository).
+The website is hosted on [Netlify](https://app.netlify.com/sites/gobridge-dot-org).
 
 Merges into the `master` branch are automatically rendered and deployed to golangbridge.org by Netlify.
 
