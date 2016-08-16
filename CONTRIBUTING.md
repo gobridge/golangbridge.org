@@ -49,7 +49,7 @@ Hugo will output a url that you can paste on your browser to see the live websit
 
 * [General GitHub documentation](http://help.github.com/)
 * [GitHub pull request documentation](http://help.github.com/send-pull-requests/)
-* #gobridge channel on [Gophers Slack](https://gophers.slack.com/messages/gobridge) - [Invite Link](https://gophersinvite.herokuapp.com/)
+* #gobridge channel on [Gophers Slack](https://gophers.slack.com/messages/gobridge) - [Invite Link](https://invite.slack.golangbridge.org/)
 
 ---
 
