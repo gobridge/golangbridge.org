@@ -23,16 +23,8 @@ name = "Gunjan Patel"
 email = "gunjan@golangbridge.org"
 
 [[members]]
-name = "Jérôme Petazzoni"
-email = "jerome@golangbridge.org"
-
-[[members]]
 name = "Johnny Boursiquot"
 email = "johnny@golangbridge.org"
-
-[[members]]
-name = "Luna Duclo"
-email = "luna@golangbridge.org"
 
 [[members]]
 name = "William Kennedy"
