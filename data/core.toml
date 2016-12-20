@@ -27,5 +27,9 @@ name = "Johnny Boursiquot"
 email = "johnny@golangbridge.org"
 
 [[members]]
+name = "Natalie Pistunovich"
+email = "natalie@golangbridge.org"
+
+[[members]]
 name = "William Kennedy"
 email = "bill@golangbridge.org"
