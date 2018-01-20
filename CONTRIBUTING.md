@@ -41,7 +41,7 @@ Hugo will output a url that you can paste on your browser to see the live websit
 
 * Make commits of logical units.
 * Check for unnecessary whitespace with `git diff --check` before committing.
-* Make sure your commit messages are in a [proper format](http://chris.beams.io/posts/git-commit, and include the issue number in the title).
+* Make sure your commit messages are in a [proper format](http://chris.beams.io/posts/git-commit), and include the issue number in the title.
 * Push your branch.
 * Make a pull request.
 
